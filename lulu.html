@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem de Aniversário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .heart {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            background-color: #ff0000;
+            transform: rotate(-45deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: #ff0000;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -75px;
+            left: 0;
+        }
+        .heart::after {
+            left: 75px;
+            top: 0;
+        }
+        .heart:hover {
+            transform: scale(1.05) rotate(-45deg);
+        }
+        .heart p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .message {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart" id="heart">
+        <p>
+            clique aq momo 
+        </p>
+    </div>
+    <div class="message" id="birthdayMessage">
+        <p>Feliz Aniversário,amor da minha vida!</p>
+        <p>Meu amor estou muito feliz por passar mais um aniversario ao seu ladinho . Quero que saiba o quanto você é importante para mim e o quanto eu sou grato por ter você na minha vida.
+            Você é a luz que ilumina meus dias e a força que me inspira a ser uma pessoa melhor e continuar vivendo a vida da melhor forma possivel que é ao seu lado . Cada dia que passa meu amor por voce aumenta e  tambem a certeza de que voce é a pessoa da minha vida  e a pessoa que vai ser a mae da familia que sempre sonhei . Admiro muito voce sua familia o seu jeitinho de ser mesmo sendo um pouco brava as vezes eu te amo de todos os jeitos de jogadora de volei , de crocheteira, de vovó de cuca , ate mesmo se voce fosse uma borboleta iria te amar ate o infinitos e alem .
+            Mesmo quando a distância nos separa, meu amor por você só cresce. Sempre estarei aqui ao seu lado, apoiando e amando você, não importa o que aconteça nao importa a hora o dia e o lugar sempre estarei aqui . Eu amo amar voce ! A melhor coisa da minha vida é poder compartilhar ela com voce , momentos , risadas , brincadeiras, presentes, chocolates , carinho , amor , fico muito feliz em poder ver sua evoluçao e poder acompanhar sua entrada na vida adulta , mesmo voce sendo adulta para todo sempre sera meu bebezinho que sempre vou cuidar e proteger da melhor forma possivel te amo muito , continue sempre sendo feliz , dedicada , inteligente , e sendo a melhor companheira do mundo  torço sempre pelo seu sucesso beijinhos e feliz 17 aninhos pincesas.
+            
+            Com todo o meu amor, Hian Oliveira Alvarenga Pereira </p>
+        <p>Te amo muito!</p>
+    </div>
+
+    <script>
+        document.getElementById('heart').addEventListener('click', function() {
+            this.style.display = 'none'; // Esconde o coração
+            document.getElementById('birthdayMessage').style.display = 'block'; // Mostra a mensagem
+        });
+    </script>
+</body>
+</html>
